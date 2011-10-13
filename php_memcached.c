@@ -115,17 +115,17 @@ typedef unsigned long int uint32_t;
 /****************************************
   Payload value flags
 ****************************************/
-#define MEMC_VAL_TYPE_MASK     0xf
+#define MEMC_VAL_TYPE_MASK     0x2f
 #define MEMC_VAL_GET_TYPE(flags)         ((flags) & MEMC_VAL_TYPE_MASK)
 #define MEMC_VAL_SET_TYPE(flags, type)   ((flags) |= ((type) & MEMC_VAL_TYPE_MASK))
 
 #define MEMC_VAL_IS_STRING     0
-#define MEMC_VAL_IS_LONG       1
-#define MEMC_VAL_IS_DOUBLE     2
-#define MEMC_VAL_IS_BOOL       3
-#define MEMC_VAL_IS_SERIALIZED 4
-#define MEMC_VAL_IS_IGBINARY   5
-#define MEMC_VAL_IS_JSON       6
+#define MEMC_VAL_IS_LONG       4
+#define MEMC_VAL_IS_DOUBLE     8
+#define MEMC_VAL_IS_BOOL       32
+#define MEMC_VAL_IS_SERIALIZED 1
+#define MEMC_VAL_IS_IGBINARY   100
+#define MEMC_VAL_IS_JSON       101
 
 #define MEMC_VAL_COMPRESSED    (1<<4)
 #define MEMC_VAL_COMPRESSION_ZLIB    (1<<5)
