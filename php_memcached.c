@@ -127,7 +127,7 @@ typedef unsigned long int uint32_t;
 #define MEMC_VAL_IS_IGBINARY   100
 #define MEMC_VAL_IS_JSON       101
 
-#define MEMC_VAL_COMPRESSED    (1<<4)
+#define MEMC_VAL_COMPRESSED    (1<<1)
 #define MEMC_VAL_COMPRESSION_ZLIB    (1<<5)
 #define MEMC_VAL_COMPRESSION_FASTLZ  (1<<6)
 
