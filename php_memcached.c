@@ -2838,6 +2838,10 @@ static int php_memc_zval_from_payload(zval *value, char *payload, size_t payload
 		payload = buffer;
 		payload_len = length;
 		payload_emalloc = 1;
+
+		flags &= ~MEMC_VAL_COMPRESSED;
+		flags &= ~MEMC_VAL_COMPRESSION_ZLIB;
+		flags &= ~MEMC_VAL_COMPRESSION_FASTLZ;
 	}
 
 	payload[payload_len] = 0;
